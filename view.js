@@ -1,7 +1,6 @@
 // ---- Define your dialogs  and panels here ----
 
 
-
 // ---- Display file structure ----
 
 // (recursively) makes and returns an html element (wrapped in a jquery object) for a given file object
@@ -72,3 +71,6 @@ $('.permbutton').click( function( e ) {
 
 // ---- Assign unique ids to everything that doesn't have an ID ----
 $('#html-loc').find('*').uniqueId() 
+
+
+$("#sidepanel").append(effectivePermPanel);
