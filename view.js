@@ -72,5 +72,15 @@ $('.permbutton').click( function( e ) {
 // ---- Assign unique ids to everything that doesn't have an ID ----
 $('#html-loc').find('*').uniqueId() 
 
+// defining the function and assigning to a variable
+let effectivePermPanel = define_new_effective_permissions("user_effective_perms", true);
 
+// make perm panel visible
 $("#sidepanel").append(effectivePermPanel);
+
+// create new selection dialog
+let userSelectField = define_new_user_select_field('userSelect', 'Select User', function(selected_user) {
+});
+
+// make dialog visible
+$("#sidepanel").append(userSelectField);
