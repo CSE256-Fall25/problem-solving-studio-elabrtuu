@@ -78,7 +78,7 @@ let effectivePermPanel = define_new_effective_permissions("user_effective_perms"
 // make perm panel visible
 $("#sidepanel").append(effectivePermPanel);
 
-// create new selection dialog
+// create new user selection button
 let userSelectField = define_new_user_select_field('userSelect', 'Select User', function(selected_user) {
     $('#user_effective_perms').attr('username', selected_user);
     $('#user_effective_perms').attr('filepath', '/C/presentation_documents/important_file.txt');
@@ -86,3 +86,12 @@ let userSelectField = define_new_user_select_field('userSelect', 'Select User', 
 
 // make dialog visible
 $("#sidepanel").append(userSelectField);
+
+// defining dialog
+let explanationDialog = define_new_dialog('explanation_dialog', 'Explanation', { });
+
+// clicker
+$('.perm_info_icon').click(function() {
+    console.log("clicked");
+    explanationDialog.dialog('open');
+});
