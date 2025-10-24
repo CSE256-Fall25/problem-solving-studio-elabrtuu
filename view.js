@@ -80,6 +80,8 @@ $("#sidepanel").append(effectivePermPanel);
 
 // create new selection dialog
 let userSelectField = define_new_user_select_field('userSelect', 'Select User', function(selected_user) {
+    $('#user_effective_perms').attr('username', selected_user);
+    $('#user_effective_perms').attr('filepath', '/C/presentation_documents/important_file.txt');
 });
 
 // make dialog visible
